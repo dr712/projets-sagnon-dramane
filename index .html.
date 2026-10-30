@@ -1,61 +1,161 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Portfolio - Sagnon Dramane</title>
     <style>
+ {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
         }
         header {
-            background-color: #007bff;
+            background-color: var(--dark);
             color: white;
+            padding: 3rem 1rem;
             text-align: center;
-            padding: 2rem;
+        }
+        header h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            margin: 0;
+        }
+        nav {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 600;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
         section {
-            max-width: 800px;
-            margin: 2rem auto;
             background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         h2 {
-            color: #007bff;
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .skill-card {
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+        }
+        .skill-card h3 {
+            margin-top: 0;
+            color: var(--dark);
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--dark);
+            color: #94a3b8;
+            margin-top: 4rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Bienvenue sur mon Portfolio</h1>
-        <p>Développeur / Étudiant en formation</p>
+        <h1>Sagnon Dramane</h1>
+        <p>Étudiant en technologie & Passionné d'informatique</p>
     </header>
 
-    <section>
-        <h2>À propos de moi</h2>
-        <p>Bonjour ! Je m'appelle Sagnon Dramane. Bienvenue sur mon site personnel où je partage mon parcours et mes compétences.</p>
-    </section>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <section>
-        <h2>Mes Compétences</h2>
-        <ul>
-            <li>Administration et Systèmes</li>
-            <li>Développement Web (HTML / CSS)</li>
-            <li>Résolution de problèmes techniques</li>
-        </ul>
-    </section>
+    <main>
+        <section id="about">
+            <h2>À propos de moi</h2>
+            <p>Bonjour ! Je m'appelle <strong>Sagnon Dramane</strong>. Actuellement en formation et engagé dans un parcours d'études supérieures en technologie, je me passionne pour l'administration des systèmes, l'ingénierie informatique et le développement de solutions web.</p>
+            <p>J'adopte une approche méthodique, rigoureuse et axée sur la résolution concrète de problèmes techniques.</p>
+        </section>
 
-    <section>
-        <h2>Contact</h2>
-        <p>Vous pouvez me contacter via mes différents réseaux ou par e-mail.</p>
-    </section>
+        <section id="skills">
+            <h2>Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Systèmes & Réseaux</h3>
+                    <p>Administration Linux (gestion des utilisateurs, groupes, permissions <code>chmod</code>/<code>chown</code>), configuration matérielle et BIOS.</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Développement Web</h3>
+                    <p>Création de sites structurés en HTML5 et CSS3, intégration de maquettes, et configuration d'environnements locaux (WordPress, PHP, VS Code).</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Résolution & Ingénierie</h3>
+                    <p>Dépannage matériel et logiciel, analyse de circuits électroniques appliqués et approche logique rigoureuse.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Mes Projets</h2>
+            <p>Voici un aperçu des projets sur lesquels je travaille actuellement :</p>
+            <ul>
+                <li><strong>Création de ce Portfolio personnel :</strong> Conception de la structure, design responsive et publication en ligne via GitHub Pages.</li>
+                <li><strong>Gestion et configuration d'environnements :</strong> Mise en place de structures web locales et gestion de dépôts de code source.</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <p>Vous souhaitez échanger, collaborer ou en savoir plus sur mon parcours ? N'hésitez pas à me contacter :</p>
+            <ul>
+                <li><strong>GitHub :</strong> <a href="https://github.com/dr712" target="_blank">github.com/dr712</a></li>
+                <li><strong>E-mail :</strong> (Votre adresse e-mail ici)</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sagnon Dramane - Tous droits réservés.</p>
+    </footer>
 
 </body>
 </html>
